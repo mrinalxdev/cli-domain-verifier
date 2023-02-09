@@ -20,21 +20,10 @@ func main(){
 	}
 
 	if err := scanner.Err(); err != nil{
-		log.Fatal("Error: could not read from the input: %v\n", err)
+		log.Fatal("Error: could not read from the input: %v", err)
 	}
 }
 
 func checkDomain (domain string){
 
-	var hasMX, hasSPF, hasDMARC bool
-	var spfRecord, dmarcRecord string
-
-	mxRecords, err := net.LookupMX(domain)
-
-	if err!= nil {
-		log.Printf("Error: %v\n", err)
-	}
-	if len(mxRecords) > 0 {
-		hasMX = true
-	}
 }

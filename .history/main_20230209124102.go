@@ -35,6 +35,6 @@ func checkDomain (domain string){
 		log.Printf("Error: %v\n", err)
 	}
 	if len(mxRecords) > 0 {
-		hasMX = true
+		hasMX
 	}
 }

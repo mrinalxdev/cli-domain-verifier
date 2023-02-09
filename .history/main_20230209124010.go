@@ -32,9 +32,6 @@ func checkDomain (domain string){
 	mxRecords, err := net.LookupMX(domain)
 
 	if err!= nil {
-		log.Printf("Error: %v\n", err)
-	}
-	if len(mxRecords) > 0 {
-		hasMX = true
+		log.Printf("Error: %v")
 	}
 }

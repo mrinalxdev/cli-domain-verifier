@@ -30,11 +30,4 @@ func checkDomain (domain string){
 	var spfRecord, dmarcRecord string
 
 	mxRecords, err := net.LookupMX(domain)
-
-	if err!= nil {
-		log.Printf("Error: %v\n", err)
-	}
-	if len(mxRecords) > 0 {
-		hasMX = true
-	}
 }
